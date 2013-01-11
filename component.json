@@ -1,0 +1,8 @@
+{
+  "name": "Dang Mai Personal Website",
+  "version": "1.0.0",
+  "main": "./index.html",
+  "dependencies": {
+    "bootstrap": "~2.2"
+  }
+}

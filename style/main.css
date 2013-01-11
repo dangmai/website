@@ -1,0 +1,60 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #525252;
+    font-size: 2.5em;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #ffffff;
+}
+
+body a {
+    color: #5bb75b;
+}
+
+body a:hover {
+    color: #4cad4c;
+}
+
+.floater {
+    float:left;
+    height:50%;
+    margin-bottom:-160px;
+}
+
+.container {
+    height: 320px;
+    clear: both;
+    position: relative;
+}
+
+em {
+    font-family: 'Dancing Script', cursive;
+    font-style: inherit;
+    color: #91dce7;
+}
+
+h1 {
+    font-weight: normal;
+    font-family: 'Benchnine', sans-serif;
+    color: #c0b47c;
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
+}
+
+h1 a {
+    color: #c0b47c;
+}
+
+h1 a:hover {
+    color: #b8aa6b;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    line-height: 1.4em;
+}
