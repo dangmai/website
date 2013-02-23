@@ -3,18 +3,18 @@ html, body {
 }
 
 body {
-    background-color: #525252;
+    background-color: #556270;
     font-size: 2.5em;
     font-family: 'Open Sans Condensed', sans-serif;
     color: #ffffff;
 }
 
 body a {
-    color: #5bb75b;
+    color: #6dbf6d;
 }
 
 body a:hover {
-    color: #4cad4c;
+    color: #5bb75b;
 }
 
 .floater {
@@ -38,17 +38,17 @@ em {
 h1 {
     font-weight: normal;
     font-family: 'Benchnine', sans-serif;
-    color: #c0b47c;
+    color: #ffbf00;
     font-size: 1.5em;
     margin-bottom: 0.2em;
 }
 
 h1 a {
-    color: #c0b47c;
+    color: #ffbf00;
 }
 
 h1 a:hover {
-    color: #b8aa6b;
+    color: #e6ac00;
 }
 
 ul {
