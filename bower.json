@@ -1,0 +1,11 @@
+{
+  "name": "Dang Mai Personal Website",
+  "version": "2.0.0",
+  "main": "./index.html",
+  "dependencies": {
+    "bootstrap": "~3.3"
+  },
+  "resolutions": {
+    "jquery": ">= 1.9.1"
+  }
+}
