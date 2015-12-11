@@ -1,12 +1,13 @@
 FROM httpd:2.4
 MAINTAINER Dang Mai <contact@dangmai.net>
 
-RUN apt-get update && apt-get install -y nodejs npm git
-RUN npm install -g bower
+RUN apt-get update && apt-get install -y nodejs npm
+RUN rm -rf /usr/local/apache2/htdocs/*
 
 WORKDIR /usr/local/apache2/htdocs
 ADD [".", "/usr/local/apache2/htdocs/"]
 
-RUN ln -s /usr/bin/nodejs /usr/bin/node
+RUN npm install && npm run build && npm run clean
 
-RUN bower install --allow-root
+EXPOSE 80
+EXPOSE 443

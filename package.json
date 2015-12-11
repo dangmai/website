@@ -1,0 +1,27 @@
+{
+  "name": "dangmai-website",
+  "version": "3.0.0",
+  "description": "Dang Mai's Personal Website",
+  "main": "index.js",
+  "scripts": {
+    "build": "cp node_modules/bootstrap/dist/css/bootstrap.min.css assets",
+    "clean": "rm -rf node_modules"
+    },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dangmai/website.git"
+  },
+  "keywords": [
+    "personal",
+    "website"
+  ],
+  "author": "Dang Mai <contact@dangmai.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dangmai/website/issues"
+  },
+  "homepage": "https://github.com/dangmai/website#readme",
+  "devDependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
