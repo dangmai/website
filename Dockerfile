@@ -10,4 +10,3 @@ ADD [".", "/usr/local/apache2/htdocs/"]
 RUN npm install && npm run build && npm run clean
 
 EXPOSE 80
-EXPOSE 443
