@@ -6,25 +6,19 @@ WORKDIR /src
 RUN npm install && npm run build && npm run clean
 EXPORT /src
 
-FROM alpine:latest
+FROM zzrot/alpine-caddy:latest
 MAINTAINER Dang Mai <contact@dangmai.net>
 
 IMPORT /src
+COPY ./tools/docker-start.sh /
 
-RUN apk --update add apache2 \
-    && rm -rf /var/cache/apk/*
+RUN mkdir -p /var/www/html \
+    && cp -aR /src/. /var/www/html/ \
+    && rm -rf /src
 
-RUN sed -i '1s/^/ServerName dangmai.net:80 \r\n\r\n/' /etc/apache2/httpd.conf
-RUN sed -i '/<Directory "\/var\/www\/localhost\/htdocs">/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/httpd.conf
-RUN sed -i 's/Group apache/Group www-data/g' /etc/apache2/httpd.conf
-RUN sed -i 's/#LoadModule rewrite_module/LoadModule rewrite_module/' /etc/apache2/httpd.conf
-RUN rm -rf /var/www/localhost/htdocs/* \
-    && cp -aR /src/. /var/www/localhost/htdocs/ \
-    && rm -rf /src \
-    && mkdir /run/apache2  # otherwise Apache2 can't create pid file
+ENTRYPOINT ["tini"]
+CMD /docker-start.sh
 
-ENTRYPOINT ["httpd"]
-CMD ["-D", "FOREGROUND"]
-EXPOSE 80
+EXPOSE 80 443
 
 TAG dangmai/website:latest
