@@ -9,4 +9,5 @@ script:
   - export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo `curl -s $PR | jq -r .head.ref`; fi)
   - export REPO="dangmai/website:latest"
   - export CONTAINER_NAME="website"
-  - if [ "$BRANCH" == "master" ]; then bash ./deploy/deploy.sh; fi
+  - bash ./deploy/build.sh
+  - if [ "$BRANCH" == "master" ]; then bash ./deploy/deploy.sh -e HOST=$HOST -e EMAIL=$EMAIL; fi
