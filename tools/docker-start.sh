@@ -15,7 +15,7 @@ errors {
     log stdout
 }
 tls {
-  provider $PROVIDER
+  dns $PROVIDER
 }
 
 mime .vcf /application/octet-stream
