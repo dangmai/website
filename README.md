@@ -1,6 +1,8 @@
 My Personal Website [![Build Status](https://travis-ci.org/dangmai/website.png)](https://travis-ci.org/dangmai/website)
 ===================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/dangmai/website.svg)](https://greenkeeper.io/)
+
 This is the source code for my [personal website](http://dangmai.net).
 It's built on [HTML5 Boilerplate](http://html5boilerplate.com/),
 but with no cache-bursting (the website itself is just a static page,
