@@ -6,7 +6,7 @@
   "scripts": {
     "build": "cp node_modules/bootstrap/dist/css/bootstrap.min.css assets",
     "clean": "rm -rf node_modules && rm package.json"
-    },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dangmai/website.git"
