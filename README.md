@@ -1,4 +1,4 @@
-My Personal Website [![Build Status](https://travis-ci.org/dangmai/website.png)](https://travis-ci.org/dangmai/website)
+My Personal Website
 ===================
 
 This is the source code for my [personal website](http://dangmai.net).
