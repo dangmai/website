@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/dangmai/website#readme",
   "devDependencies": {
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^4.1.0"
   }
 }
